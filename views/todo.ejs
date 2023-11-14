@@ -16,7 +16,16 @@
     <body>
         <h1>Jenkins & batch 4 are just Amazing, Awesome,shaandaar, majedaar and I will attend Live sessions</h1>
         <ul>
-            <h1>Jenkins & batch 4 are just sudhir, Awesome,shaandaar, majedaar and I will attend Live sessions</h1>
+            <% todolist.forEach(function(todo, index) { %>
+            <li>
+                <a href="/todo/delete/<%= index %>">✘</a>
+                <a href="/todo/<%= index %>">✎</a>
+                <%- todo %>
+            </li>
+            <% }); %>
+        </ul>
+
+        <ul>
             <% todolist.forEach(function(todo, index) { %>
             <li>
                 <a href="/todo/delete/<%= index %>">✘</a>
